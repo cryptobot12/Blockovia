@@ -399,7 +399,7 @@ public:
          *     CTxOut(nValue=50.00000000, scriptPubKey=0xA9037BAC7050C479B121CF)
          *   vMerkleTree: e0028e
          */
-        const char* pszTimestamp = "22th March Blockovia Coin initial date";
+        const char* pszTimestamp = "22th March Blockovia Coin initial date, developed by forhad shamim";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -412,12 +412,12 @@ public:
         genesis.nVersion = 1;
         genesis.nTime = 1521655894;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 0;
+        genesis.nNonce = 152344;
 
         hashGenesisBlock = genesis.GetHash();
 
-        assert(hashGenesisBlock == uint256("0xbf7fdb166c58ef349097c3964b433a9821983483307cf5fc71335fd7b380fe36"));
-        assert(genesis.hashMerkleRoot == uint256("0x1b2ef6e2f28be914103a277377ae7729dcd125dfeb8bf97bd5964ba72b6dc39b"));
+        assert(hashGenesisBlock == uint256(""0x000003f066d2d05d2f9d3941031d392394c66fe20ac70d63f819cdc18ff33d72""));
+        assert(genesis.hashMerkleRoot == uint256(""0xe824a3d5392b0754ae03ad1742297aab99eac7cbfcf9ddb93479f336b069f88f""));
 
         vSeeds.push_back(CDNSSeedData("159.65.228.201", "159.65.228.201"));
 
@@ -470,7 +470,7 @@ public:
         pchMessageStart[2] = 0x65;
         pchMessageStart[3] = 0xba;
         vAlertPubKey = ParseHex("000010e83b2703ccf322f7dbd62dd5855abcc10bd055814ce121ba32607d573b8810c02c0582aed05b4deb9c4b77b26d92428c61256cd42774babea0a073b2ed0c9");
-        nDefaultPort = 51474;
+        nDefaultPort = 2433;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
@@ -485,17 +485,14 @@ public:
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1521655894;
-        genesis.nNonce = 0;
+        genesis.nNonce = 152344;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x0000041e482b9b9691d98eefb48473405c0b8ec31b76df3797c74a78680ef818"));
+        assert(hashGenesisBlock == uint256("0x000003f066d2d05d2f9d3941031d392394c66fe20ac70d63f819cdc18ff33d72"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "blockovia-testnet.seed.fuzzbawls.pw"));
-        vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "blockovia-testnet.seed2.fuzzbawls.pw"));
-        vSeeds.push_back(CDNSSeedData("s3v3nh4cks.ddns.net", "s3v3nh4cks.ddns.net"));
-        vSeeds.push_back(CDNSSeedData("88.198.192.110", "88.198.192.110"));
+        vSeeds.push_back(CDNSSeedData("159.65.228.201", "159.65.228.201"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 139); // Testnet blockovia addresses start with 'x' or 'y'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);  // Testnet blockovia script addresses start with '8' or '9'
@@ -551,11 +548,11 @@ public:
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         genesis.nTime = 1521655894;
         genesis.nBits = 0x207fffff;
-        genesis.nNonce = 0;
+        genesis.nNonce = 1;
 
         hashGenesisBlock = genesis.GetHash();
-        nDefaultPort = 51476;
-        //assert(hashGenesisBlock == uint256("0x4f023a2120d9127b21bbad01724fdb79b519f593f2a85b60d3d79160ec5f29df"));
+        nDefaultPort = 2532;
+        assert(hashGenesisBlock == uint256("0x2ca21e1e16618b4f2967af69ec3709a0ec1e250c4ffc384a6761bc92e2ebbb42"));
 
         vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.
