@@ -1,0 +1,26 @@
+# /etc/conf.d/blockoviad: config file for /etc/init.d/blockoviad
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/blockovia/blockovia.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/blockoviad"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/blockoviad.pid"
+
+# Where to write blockoviad data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/blockoviad"
+
+# User and group to own blockoviad process
+#BITCOIND_USER="blockovia"
+#BITCOIND_GROUP="blockovia"
+
+# Path to blockoviad executable
+#BITCOIND_BIN="/usr/bin/blockoviad"
+
+# Nice value to run blockoviad under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

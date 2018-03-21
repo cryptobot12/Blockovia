@@ -1,0 +1,28 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/blockovia_bg.qm</file>
+        <file alias="ca">locale/blockovia_ca.qm</file>
+        <file alias="cs">locale/blockovia_cs.qm</file>
+        <file alias="da">locale/blockovia_da.qm</file>
+        <file alias="de">locale/blockovia_de.qm</file>
+        <file alias="en">locale/blockovia_en.qm</file>
+        <file alias="en_US">locale/blockovia_en_US.qm</file>
+        <file alias="es">locale/blockovia_es.qm</file>
+        <file alias="fi">locale/blockovia_fi.qm</file>
+        <file alias="fr_FR">locale/blockovia_fr_FR.qm</file>
+        <file alias="it">locale/blockovia_it.qm</file>
+        <file alias="ja">locale/blockovia_ja.qm</file>
+        <file alias="ko_KR">locale/blockovia_ko_KR.qm</file>
+        <file alias="nl">locale/blockovia_nl.qm</file>
+        <file alias="pl">locale/blockovia_pl.qm</file>
+        <file alias="pt">locale/blockovia_pt.qm</file>
+        <file alias="pt_BR">locale/blockovia_pt_BR.qm</file>
+        <file alias="ro_RO">locale/blockovia_ro_RO.qm</file>
+        <file alias="ru">locale/blockovia_ru.qm</file>
+        <file alias="sk">locale/blockovia_sk.qm</file>
+        <file alias="sv">locale/blockovia_sv.qm</file>
+        <file alias="uk">locale/blockovia_uk.qm</file>
+        <file alias="zh_CN">locale/blockovia_zh_CN.qm</file>
+        <file alias="zh_TW">locale/blockovia_zh_TW.qm</file>
+    </qresource>
+</RCC>

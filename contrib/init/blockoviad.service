@@ -1,0 +1,26 @@
+[Unit]
+Description=BCK's distributed currency daemon
+After=network.target
+
+[Service]
+User=blockovia
+Group=blockovia
+
+Type=forking
+PIDFile=/var/lib/blockoviad/blockoviad.pid
+
+ExecStart=/usr/bin/blockoviad -daemon -pid=/var/lib/blockoviad/blockoviad.pid \
+          -conf=/etc/blockovia/blockovia.conf -datadir=/var/lib/blockoviad
+
+ExecStop=-/usr/bin/blockovia-cli -conf=/etc/blockovia/blockovia.conf \
+         -datadir=/var/lib/blockoviad stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

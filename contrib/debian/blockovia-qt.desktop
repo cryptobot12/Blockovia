@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=blockovia
+Comment=blockovia P2P Cryptocurrency
+Comment[fr]=blockovia, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=blockovia, eşten eşe kriptografik sanal para birimi
+Exec=blockovia-qt %u
+Terminal=false
+Type=Application
+Icon=blockovia128
+MimeType=x-scheme-handler/blockovia;
+Categories=Office;Finance;
