@@ -95,7 +95,7 @@ static void CheckBlockIndex();
 /** Constant stuff for coinbase transactions we create: */
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "DarkNet Signed Message:\n";
+const string strMessageMagic = "Blockovia Signed Message:\n";
 
 // Internal stuff
 namespace
@@ -1614,14 +1614,11 @@ int64_t GetBlockValue(int nHeight)
 {
     int64_t nSubsidy = 0;
 
-    //if (Params().NetworkID() == CBaseChainParams::TESTNET) {
-        if (nHeight < 1001 && nHeight > 0)
-            return 30000 * COIN;
-    //}
-
+    if (nHeight < 1001 && nHeight > 0)
+            return 21000 * COIN;
     if (nHeight == 0) {
 
-        nSubsidy = 1 * COIN;
+        nSubsidy = 0 * COIN;
 
 
 
