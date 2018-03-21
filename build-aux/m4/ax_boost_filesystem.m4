@@ -38,7 +38,7 @@ AC_DEFUN([AX_BOOST_FILESYSTEM],
 	AC_ARG_WITH([boost-filesystem],
 	AS_HELP_STRING([--with-boost-filesystem@<:@=special-lib@:>@],
                    [use the Filesystem library from boost - it is possible to specify a certain library for the linker
-                        e.g. --with-boost-filesystem=boost_filesystem-gcc-mt ]),
+                        e.g. --with-boost-filesystem=boost_filesystem-gcxc-mt ]),
         [
         if test "$withval" = "no"; then
 			want_boost="no"

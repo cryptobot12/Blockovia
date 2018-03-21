@@ -36,7 +36,7 @@ AC_DEFUN([AX_BOOST_CHRONO],
 	AC_ARG_WITH([boost-chrono],
 	AS_HELP_STRING([--with-boost-chrono@<:@=special-lib@:>@],
                    [use the Chrono library from boost - it is possible to specify a certain library for the linker
-                        e.g. --with-boost-chrono=boost_chrono-gcc-mt ]),
+                        e.g. --with-boost-chrono=boost_chrono-gcxc-mt ]),
         [
         if test "$withval" = "no"; then
 			want_boost="no"

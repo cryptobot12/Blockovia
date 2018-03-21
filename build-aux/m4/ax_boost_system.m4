@@ -38,7 +38,7 @@ AC_DEFUN([AX_BOOST_SYSTEM],
 	AC_ARG_WITH([boost-system],
 	AS_HELP_STRING([--with-boost-system@<:@=special-lib@:>@],
                    [use the System library from boost - it is possible to specify a certain library for the linker
-                        e.g. --with-boost-system=boost_system-gcc-mt ]),
+                        e.g. --with-boost-system=boost_system-gcxc-mt ]),
         [
         if test "$withval" = "no"; then
 			want_boost="no"

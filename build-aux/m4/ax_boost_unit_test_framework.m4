@@ -36,7 +36,7 @@ AC_DEFUN([AX_BOOST_UNIT_TEST_FRAMEWORK],
 	AC_ARG_WITH([boost-unit-test-framework],
 	AS_HELP_STRING([--with-boost-unit-test-framework@<:@=special-lib@:>@],
                    [use the Unit_Test_Framework library from boost - it is possible to specify a certain library for the linker
-                        e.g. --with-boost-unit-test-framework=boost_unit_test_framework-gcc ]),
+                        e.g. --with-boost-unit-test-framework=boost_unit_test_framework-gcxc ]),
         [
         if test "$withval" = "no"; then
 			want_boost="no"
