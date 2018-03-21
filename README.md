@@ -23,13 +23,14 @@ More information at [blockoviaoin.org](http://www.blockoviaoin.org)
 <tr><td>Type</td><td>PoW - PoS Hybrid*</td></tr>
 <tr><td>Block Time</td><td>30 Seconds</td></tr>
 <tr><td>Difficulty Retargeting</td><td>Every Block</td></tr>
-<tr><td>Premine/Initial Supply</td><td>30Mil BCK*</td></tr>
+<tr><td>Premine/Initial Supply</td><td>21Mil BCK*</td></tr>
 <tr><td>BCK Created Per block</td><td>1 BCK*</td></tr>
 </table>
 
 *First 1000 Blocks PoW. 1001 - Infinite Blocks PoS only.
+*total Pow Block is Pre-Mine.
 
-**30Mil BCK initial coins Premined to Swap over prior BCK Block Chain.
+**21Mil BCK initial coins Premined to Swap over prior BCK Block Chain.
 
 ### PoS/PoW Block Details
 <table>
