@@ -53,15 +53,13 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 //    timestamp before)
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
-    boost::assign::map_list_of
-    (0, uint256("0x000008467c3a9c587533dea06ad9380cded3ed32f9742a6c0c1aebc21bf2bc9b"));
-
+    boost::assign::map_list_of(0, uint256("0x000003f066d2d05d2f9d3941031d392394c66fe20ac70d63f819cdc18ff33d72"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1516926684, // * UNIX timestamp of last checkpoint block
-    0,          // * total number of transactions between genesis and last checkpoint
+    1521655894, // * UNIX timestamp of last checkpoint block
+    0,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
-    2000        // * estimated number of transactions per day after checkpoint
+    100       // * estimated number of transactions per day after checkpoint
 };
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
@@ -108,7 +106,7 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 30; // Bitcoin Neutral: 1 day
         nTargetSpacing = 1 * 30;  // Bitcoin Neutral: 2 minutes
-        nMaturity = 10;
+        nMaturity = 4;
         nMasternodeCountDrift = 20;
         nMaxMoneyOut = 21000000 * COIN;
 
@@ -156,8 +154,7 @@ public:
         vSeeds.push_back(CDNSSeedData("159.65.228.201", "159.65.228.201"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 25);
-        // Bitcoin Neutral script addresses start with '3'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 6);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 26);
         // Bitcoin Neutral private keys start with 'K'
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 46);
         // Bitcoin Neutral BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
@@ -181,8 +178,8 @@ public:
 
         nPoolMaxTransactions = 3;
         strSporkKey = "0484698d3ba6ba6e7423fa5cbd6a89e0a9a5128f88d332b44a5cb1a8b7ed2c1eaa335fc8dc4f012cb8241cc0bdafd6ca70c5f5448916e4e6f511bcd746ed57dc50";
-        strPrivateSendPoolDummyAddress  = "GSJVWUkt6HtSCY2SaJ2akeyJUg8bg1hW3S";
-        nStartMasternodePayments = genesis.nTime + 86400; // 24 hours after genesis creation
+        strPrivateSendPoolDummyAddress   = "B87q2gC9j6nNrnzCsg4aY6bHMLsT9nUhEw";
+        nStartMasternodePayments = 1521655994; // 24 hours after genesis creation
 
         nBudget_Fee_Confirmations = 6; // Number of confirmations for the finalization fee
     }
@@ -203,26 +200,24 @@ public:
     CTestNetParams()
     {
         networkID = CBaseChainParams::TESTNET;
-        strNetworkID = "test";
-        pchMessageStart[0] = 0x4a;
-        pchMessageStart[1] = 0x2d;
-        pchMessageStart[2] = 0x32;
-        pchMessageStart[3] = 0xbc;
-        vAlertPubKey = ParseHex("041b2b4c86273359acac3522471911ed2b303eaab65e8a1de01c06e89f2eab1e55234a4b504f3ce20c6f661f007d0ca15623b4358d9855c7c8ba793a24fa315e22");
+        pchMessageStart[0] = 0x45;
+        pchMessageStart[1] = 0x76;
+        pchMessageStart[2] = 0x65;
+        pchMessageStart[3] = 0xba;
+        vAlertPubKey = ParseHex("000010e83b2703ccf322f7dbd62dd5855abcc10bd055814ce121ba32607d573b8810c02c0582aed05b4deb9c4b77b26d92428c61256cd42774babea0a073b2ed0c9");
         nDefaultPort = 2433;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
         nMinerThreads = 0;
-        nTargetTimespan = 1 * 60; // Bitcoin Neutral: 1 day
-        nTargetSpacing = 2 * 60;  // Bitcoin Neutral: 1 minute
+        nTargetTimespan = 1 * 60; // BCK: 1 day
+        nTargetSpacing = 1 * 60;  // BCK: 1 minute
         nLastPOWBlock = 200;
         nMaturity = 15;
         nMasternodeCountDrift = 4;
-        nModifierUpdateBlock = 1;
-        nMaxMoneyOut = 21000000 * COIN;
+        nModifierUpdateBlock = 51197; //approx Mon, 17 Apr 2017 04:00:00 GMT
+        nMaxMoneyOut = 43199500 * COIN;
 
-        //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1521655894;
         genesis.nNonce = 152344;
 
@@ -231,7 +226,7 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-	    vSeeds.push_back(CDNSSeedData("159.65.228.201", "159.65.228.201"));
+        vSeeds.push_back(CDNSSeedData("159.65.228.201", "159.65.228.201"));
         
         // Testnet Bitcoin Neutral addresses start with 'g'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 98);
@@ -280,28 +275,28 @@ public:
         networkID = CBaseChainParams::REGTEST;
         strNetworkID = "regtest";
         strNetworkID = "regtest";
-        pchMessageStart[0] = 0x20;
-        pchMessageStart[1] = 0xee;
-        pchMessageStart[2] = 0x32;
-        pchMessageStart[3] = 0xbc;
+        pchMessageStart[0] = 0xa1;
+        pchMessageStart[1] = 0xcf;
+        pchMessageStart[2] = 0x7e;
+        pchMessageStart[3] = 0xac;
         nSubsidyHalvingInterval = 150;
         nEnforceBlockUpgradeMajority = 750;
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 1;
-        nTargetTimespan = 24 * 60 * 60; // Bitcoin Neutral: 1 day
-        nTargetSpacing = 2 * 60;        // Bitcoin Neutral: 1 minutes
+        nTargetTimespan = 24 * 60 * 60; // blockovia: 1 day
+        nTargetSpacing = 1 * 60;        // blockovia: 1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
-        genesis.nTime = 1516926684;
+        genesis.nTime = 1521655894;
         genesis.nBits = 0x207fffff;
-        genesis.nNonce = 20542300;
+        genesis.nNonce = 1;
 
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 2532;
         assert(hashGenesisBlock == uint256("0x2ca21e1e16618b4f2967af69ec3709a0ec1e250c4ffc384a6761bc92e2ebbb42"));
 
-        vFixedSeeds.clear(); //! Regtest mode doesn't have any fixed seeds.
-        vSeeds.clear();      //! Regtest mode doesn't have any DNS seeds.
+        vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.
+        vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.
 
         fMiningRequiresPeers = false;
         fAllowMinDifficultyBlocks = true;
