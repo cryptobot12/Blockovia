@@ -148,8 +148,8 @@ public:
 
         hashGenesisBlock = genesis.GetHash();
 
-        assert(hashGenesisBlock == uint256(""0x000003f066d2d05d2f9d3941031d392394c66fe20ac70d63f819cdc18ff33d72""));
-        assert(genesis.hashMerkleRoot == uint256(""0xe824a3d5392b0754ae03ad1742297aab99eac7cbfcf9ddb93479f336b069f88f""));
+        assert(hashGenesisBlock == uint256("0x000003f066d2d05d2f9d3941031d392394c66fe20ac70d63f819cdc18ff33d72"));
+        assert(genesis.hashMerkleRoot == uint256("0xe824a3d5392b0754ae03ad1742297aab99eac7cbfcf9ddb93479f336b069f88f"));
 
         vSeeds.push_back(CDNSSeedData("159.65.228.201", "159.65.228.201"));
 
